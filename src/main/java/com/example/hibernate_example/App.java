@@ -14,9 +14,18 @@ import org.hibernate.service.ServiceRegistry;
 public class App {
     public static void main(String[] args) {
         Alien obj = new Alien();
-        // obj.setAid(103);
-        // obj.setAname("Drashti");
-        // obj.setColor("Blue");
+        // Alien obj = null; // for fetching data bcz we don't need to create object for
+        // fetching
+
+        AlienName an = new AlienName();
+
+        an.setFname("Mansi");
+        an.setLname("Padia");
+        an.setMname("Gopalbhai");
+
+        obj.setAid(101);
+        obj.setAname(an);
+        obj.setColor("Cream");
 
         Configuration con = new Configuration().configure().addAnnotatedClass(Alien.class);
 
@@ -29,9 +38,9 @@ public class App {
 
         Transaction tx = session.beginTransaction();
 
-        // session.save(obj);
+        session.save(obj);
 
-        Obj = (Alien) session.get(Alien.class, 101);
+        obj = (Alien) session.get(Alien.class, 101);
 
         tx.commit();
 
