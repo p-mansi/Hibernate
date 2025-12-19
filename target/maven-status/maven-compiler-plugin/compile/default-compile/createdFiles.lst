@@ -1,3 +1,6 @@
 com\example\hibernate_example\App.class
-com\example\hibernate_example\AlienName.class
-com\example\hibernate_example\Alien.class
+com\example\hibernate_example\Model\Student.class
+com\example\hibernate_example\Model\Alien.class
+com\example\hibernate_example\Model\AlienName.class
+com\example\hibernate_example\Model\Laptop.class
+com\example\hibernate_example\RelationshipExApp.class

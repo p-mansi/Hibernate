@@ -1,4 +1,4 @@
-package com.example.hibernate_example;
+package com.example.hibernate_example.Model;
 
 import jakarta.persistence.Embeddable;
 

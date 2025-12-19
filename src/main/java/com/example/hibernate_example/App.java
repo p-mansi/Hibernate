@@ -7,6 +7,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
+import com.example.hibernate_example.Model.Alien;
+import com.example.hibernate_example.Model.AlienName;
+
 /**
  * Hello world!
  *

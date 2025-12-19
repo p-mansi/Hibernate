@@ -39,6 +39,13 @@
         <version>8.3.0</version>
     </dependency>
 
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.7.3</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
@@ -94,4 +101,20 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <profiles>
+    <profile>
+      <id>Alien</id>
+      <properties>
+        <main.class>com.example.hibernate_example.App</main.class>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>Relation</id>
+      <properties>
+        <main.class>com.example.hibernate_example.RelationshipExApp.java</main.class>
+      </properties>
+    </profile>
+  </profiles>
 </project>
