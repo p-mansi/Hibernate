@@ -2,7 +2,7 @@ package com.example.hibernate_example.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+// import jakarta.persistence.Table;
 
 @Entity
 // @Entity(name="Alien_Table")
