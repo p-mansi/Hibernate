@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 
@@ -14,7 +15,7 @@ public class Student {
     private int rollno;
     private String name;
     private int marks;
-    @ManyToMany(mappedBy = "student")
+    @ManyToMany(mappedBy = "student", fetch = FetchType.EAGER)
     private List<Laptop> laptop = new ArrayList<>();
 
     public int getRollno() {
