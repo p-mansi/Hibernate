@@ -1,7 +1,11 @@
 package com.example.hibernate_example.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Student {
@@ -10,6 +14,8 @@ public class Student {
     private int rollno;
     private String name;
     private int marks;
+    @ManyToMany(mappedBy = "student")
+    private List<Laptop> laptop = new ArrayList<>();
 
     public int getRollno() {
         return rollno;
@@ -33,6 +39,14 @@ public class Student {
 
     public void setMarks(int marks) {
         this.marks = marks;
+    }
+
+    public List<Laptop> getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(List<Laptop> laptop) {
+        this.laptop = laptop;
     }
 
 }

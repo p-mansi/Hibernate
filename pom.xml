@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -44,6 +44,13 @@
         <artifactId>postgresql</artifactId>
         <version>42.7.3</version>
     </dependency>
+
+    <dependency>
+      <groupId>io.github.cdimascio</groupId>
+      <artifactId>dotenv-java</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
 
 
   </dependencies>
@@ -95,8 +102,9 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.1.0</version>
             <configuration>
-                <mainClass>com.example.hibernate_example.App</mainClass>
+                <mainClass>${main.class}</mainClass>
             </configuration>
+
         </plugin>
       </plugins>
     </pluginManagement>
@@ -113,7 +121,7 @@
     <profile>
       <id>Relation</id>
       <properties>
-        <main.class>com.example.hibernate_example.RelationshipExApp.java</main.class>
+        <main.class>com.example.hibernate_example.RelationshipExApp</main.class>
       </properties>
     </profile>
   </profiles>
