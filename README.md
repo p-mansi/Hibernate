@@ -1,5 +1,3 @@
----
-
 # Hibernate ORM with PostgreSQL (Maven Project)
 
 This project demonstrates a **core Hibernate ORM setup** using **Maven**, **PostgreSQL**, and **Java**, including:
