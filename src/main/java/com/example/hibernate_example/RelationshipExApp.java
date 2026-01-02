@@ -5,14 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import com.example.hibernate_example.Model.Laptop;
 import com.example.hibernate_example.Model.Student;
-
-import io.github.cdimascio.dotenv.Dotenv;
+import com.example.hibernate_example.Utility.HibernateUtil;
 
 public class RelationshipExApp {
 
@@ -23,16 +20,7 @@ public class RelationshipExApp {
         Laptop laptop = new Laptop();
         Student student = new Student();
 
-        Configuration con = new Configuration().configure().addAnnotatedClass(Student.class)
-                .addAnnotatedClass(Laptop.class);
-        Dotenv dotenv = Dotenv.load();
-
-        con.setProperty("hibernate.connection.url", dotenv.get("DB_URL"));
-        con.setProperty("hibernate.connection.username", dotenv.get("DB_USERNAME"));
-        con.setProperty("hibernate.connection.password", dotenv.get("DB_PASSWORD"));
-
-        SessionFactory sf = con.buildSessionFactory();
-        Session session = sf.openSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter Your Choice : 1. Insert | 2. View ");
@@ -80,7 +68,7 @@ public class RelationshipExApp {
         }
 
         session.close();
-        sf.close();
+        HibernateUtil.shutdown();
 
     }
 }
