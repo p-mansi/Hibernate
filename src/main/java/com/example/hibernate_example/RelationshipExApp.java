@@ -28,12 +28,12 @@ public class RelationshipExApp {
         switch (ch) {
             case 1:
                 Transaction tx = session.beginTransaction();
-                laptop.setLid(101);
-                laptop.setLname("Dell");
+                laptop.setLid(102);
+                laptop.setLname("Lenovo");
 
-                student.setRollno(1);
-                student.setName("Mansi");
-                student.setMarks(70);
+                student.setRollno(2);
+                student.setName("Paul");
+                student.setMarks(80);
                 student.getLaptop().add(laptop);
 
                 laptop.getStudent().add(student);

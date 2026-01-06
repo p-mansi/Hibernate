@@ -197,5 +197,12 @@
         <main.class>com.example.hibernate_example.HibernateObjStatesApp</main.class>
       </properties>
     </profile>
+    
+    <profile>
+      <id>GetVsLoadEx</id>
+      <properties>
+        <main.class>com.example.hibernate_example.GetVsLoadExApp</main.class>
+      </properties>
+    </profile>
   </profiles>
 </project>
