@@ -190,5 +190,12 @@
         <main.class>com.example.hibernate_example.HQLExApp</main.class>
       </properties>
     </profile>
+    
+    <profile>
+      <id>HibernateObjStates</id>
+      <properties>
+        <main.class>com.example.hibernate_example.HibernateObjStatesApp</main.class>
+      </properties>
+    </profile>
   </profiles>
 </project>

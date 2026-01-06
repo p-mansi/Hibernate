@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 // @Entity(name="Alien_Table")
 // @Table(name = "Alien_Table")
 @Cacheable
-@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Alien {
 
     @Id
