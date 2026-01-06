@@ -183,5 +183,12 @@
         <main.class>com.example.hibernate_example.CacheExApp</main.class>
       </properties>
     </profile>
+
+    <profile>
+      <id>HQLEx</id>
+      <properties>
+        <main.class>com.example.hibernate_example.HQLExApp</main.class>
+      </properties>
+    </profile>
   </profiles>
 </project>
